@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>contato</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<h1>Nome</h1><ion-input type="text"[(ngModel)]="nome"></ion-input>
+<h1>Telefone</h1><ion-input type="text"[(ngModel)]="telefone"></ion-input>
+<h1>Email</h1><ion-input type="text"[(ngModel)]="email"></ion-input>
+<h1>Messagem</h1><ion-textarea type="text"[(ngModel)]="messagem"></ion-textarea>
+<ion-button (click)="reclama()">cradastrar</ion-button>
+<ion-card>
+<ion-card-content color="secondary" *ngFor="let item of mess">
+  Nome:{{item.nome}} 
+  Telefone:{{item.telefone}}
+  Email:{{item.email}}
+  
+</ion-card-content>
+</ion-card>
+<ion-card>
+  <ion-card-content color="secondary" *ngFor="let item of mess">
+    Messagem:{{item.messagem}}
+  </ion-card-content>
+  </ion-card>
+</ion-content>
+
+
